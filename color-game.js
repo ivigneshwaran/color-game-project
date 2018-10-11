@@ -9,7 +9,7 @@ var resetButton = document.querySelector("#reset");
 colorDisplay.textContent=pickedColor;
 
 resetButton.addEventListener("click", function(){
-	// generate new colors
+	// generate new colors for the squares
 	colors = generateRandomColors(6);
 	// pickig the new random color
 	pickedColor = pickColor();
