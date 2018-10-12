@@ -1,5 +1,7 @@
 body {
 	background: #23233b;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 .square {
 	width: 30%;
@@ -9,16 +11,56 @@ body {
 	float: left;
 	margin: 1.66%;
 	border-radius: 20px;
+	transition:background, .6s;
+	-webkit-transition: background, .6s;
+	-moz-transition: background, .6s;
 }
 #container {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 h1 {
-	color: gray;
+	margin: 0;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 20px 0;
+	background: #cf0505;
 }
 #strip {
+	height: 30px;
 	background: white;
 	color: #23233b;
 	text-align: center;
+}
+.selected {
+	background: #cf0505;
+	color: #ffffff;
+}
+
+#colorDisplay {
+	font-size: 50px;
+}
+
+button {
+	background: none;
+	color: #cf0505;
+	border: none;
+	height: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: inherit;
+	transition: all, .3s;
+	-webkit-transition: all, .3s;
+	-moz-transition: all, .3s;
+	outline: none;
+}
+
+#messageDisplay {
+	display: inline-block;
+	width: 20%;
+}
+button:hover {
+	background: #bbbab6;
+	color: #cf0505;
 }
