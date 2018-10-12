@@ -1,12 +1,38 @@
-var colors = generateRandomColors(6);
+var numSquare = 6;
+var colors = generateRandomColors(numSquare);
 var pickedColor = pickColor();
 var square =document.querySelectorAll(".square");
 var colorDisplay =document.querySelector("#colorDisplay");
 var messageDisplay = document.getElementById("messageDisplay");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
 
 colorDisplay.textContent=pickedColor;
+
+
+easyBtn.addEventListener("click", function(){
+	easyBtn.classList.add("selected");
+	hardBtn.classList.remove("selected");
+	numSquare = 3;
+	colors = generateRandomColors(numSquare);
+	pickedColor = pickColor();
+	colorDisplay.textContent=pickedColor;
+	for(var i = 0; i< square.length; i++) {
+		if(square[i]){
+			square[i].style.backgroundColor =colors[i];
+		}
+		square[3].style.display ="none";
+		square[4].style.display ="none";
+		square[5].style.display ="none";
+		// else {
+		// 	square[i].style.display="none";
+		// }
+	}
+	h1.style.background = "#cf0505"
+});
+
 
 resetButton.addEventListener("click", function(){
 	// generate new colors for the squares
