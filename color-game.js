@@ -51,6 +51,8 @@ hardBtn.addEventListener("click", function(){
 });
 
 resetButton.addEventListener("click", function(){
+	messageDisplay.textContent="";
+	this.textContent="New Colors";
 	// generate new colors for the squares
 	colors = generateRandomColors(6);
 	// pickig the new random color
