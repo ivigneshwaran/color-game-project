@@ -33,6 +33,20 @@ easyBtn.addEventListener("click", function(){
 	h1.style.background = "#cf0505"
 });
 
+hardBtn.addEventListener("click", function(){
+	easyBtn.classList.remove("selected");
+	hardBtn.classList.add("selected");
+	numSquare = 6;
+	colors = generateRandomColors(numSquare);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	for(var i = 0; i< square.length; i++) {
+		square[i].style.backgroundColor =colors[i];
+		square[i].style.display ="block";
+	
+	}
+	h1.style.background = "#cf0505"
+});
 
 resetButton.addEventListener("click", function(){
 	// generate new colors for the squares
