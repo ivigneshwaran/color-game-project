@@ -13,6 +13,7 @@ colorDisplay.textContent=pickedColor;
 
 
 easyBtn.addEventListener("click", function(){
+	messageDisplay.textContent="";
 	easyBtn.classList.add("selected");
 	hardBtn.classList.remove("selected");
 	numSquare = 3;
@@ -34,6 +35,7 @@ easyBtn.addEventListener("click", function(){
 });
 
 hardBtn.addEventListener("click", function(){
+	messageDisplay.textContent="";
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
 	numSquare = 6;
