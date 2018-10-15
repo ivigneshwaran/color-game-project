@@ -11,7 +11,6 @@ var hardBtn = document.querySelector("#hardBtn");
 
 colorDisplay.textContent=pickedColor;
 
-
 easyBtn.addEventListener("click", function(){
 	messageDisplay.textContent="";
 	easyBtn.classList.add("selected");
@@ -27,6 +26,9 @@ easyBtn.addEventListener("click", function(){
 		square[3].style.display ="none";
 		square[4].style.display ="none";
 		square[5].style.display ="none";
+		
+		// method-2
+		
 		// else {
 		// 	square[i].style.display="none";
 		// }
@@ -49,18 +51,7 @@ hardBtn.addEventListener("click", function(){
 });
 
 resetButton.addEventListener("click", function(){
-	messageDisplay.textContent="";
-	this.textContent="New Colors";
-	// generate new colors for the squares
-	colors = generateRandomColors(6);
-	// pickig the new random color
-	pickedColor = pickColor();
-	// change colorDisplay to match picked color
-	colorDisplay.textContent=pickedColor;
-	//change the square color
-	for (var i =0; i < square.length; i++){
-		square[i].style.backgroundColor =colors[i];
-	}
+	reset();
 });
 
 for (var i =0; i < square.length; i++){
@@ -121,4 +112,19 @@ function randomColor() {
 
 	// return the random colors
 	return "rgb("+ r + ", " + g + ", " + b +")";
+}
+
+function reset() {
+	messageDisplay.textContent="";
+	resetButton.textContent="New Colors";
+	// generate new colors for the squares
+	colors = generateRandomColors(numSquare);
+	// pickig the new random color
+	pickedColor = pickColor();
+	// change colorDisplay to match picked color
+	colorDisplay.textContent=pickedColor;
+	//change the square color
+	for (var i =0; i < square.length; i++){
+		square[i].style.backgroundColor =colors[i];
+	}
 }
