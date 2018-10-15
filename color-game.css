@@ -14,6 +14,7 @@ body {
 	transition:background, .6s;
 	-webkit-transition: background, .6s;
 	-moz-transition: background, .6s;
+	cursor: pointer;
 }
 #container {
 	max-width: 600px;
@@ -37,11 +38,9 @@ h1 {
 	background: #cf0505;
 	color: #ffffff;
 }
-
 #colorDisplay {
 	font-size: 50px;
 }
-
 button {
 	background: none;
 	color: #cf0505;
@@ -55,7 +54,6 @@ button {
 	-moz-transition: all, .3s;
 	outline: none;
 }
-
 #messageDisplay {
 	display: inline-block;
 	width: 20%;
