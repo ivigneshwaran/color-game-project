@@ -1,5 +1,6 @@
 body {
-	background: #23233b;
+	/*background: #23233b;*/
+	background: #ffffff;
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -30,9 +31,13 @@ h1 {
 }
 #strip {
 	height: 30px;
-	background: white;
+	background: #c7c7c7;
 	color: #23233b;
 	text-align: center;
+	word-spacing: 20px;
+}
+#reset {
+	margin-right: 30%;
 }
 .selected {
 	background: #cf0505;
@@ -54,11 +59,50 @@ button {
 	-moz-transition: all, .3s;
 	outline: none;
 }
+#status {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
 #messageDisplay {
 	display: inline-block;
-	width: 20%;
 }
 button:hover {
-	background: #bbbab6;
-	color: #cf0505;
+	background: #cf0505;
+	color: #c7c7c7;
+}
+
+
+/* ************************** media query ****************************** */
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 30px;
+	}
+	#colorDisplay {
+		font-size: 40px;
+	}
+	#strip {
+		height: 40px;
+	}
+	#reset {
+		margin-right: 10%;
+	}
+}
+
+
+@media screen and (max-width: 330px) {
+	h1 {
+		font-size: 25px;
+	}
+	#colorDisplay {
+		font-size: 35px;
+	}
+	#strip {
+		height: 35px;
+		font-size: 14px;
+	}
+	#reset {
+		margin-right: 5%;
+	}
 }
